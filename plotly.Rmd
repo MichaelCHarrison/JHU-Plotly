@@ -14,6 +14,28 @@ library(plotly)
 
 #Basic Scatterplot
 ```{r, echo=FALSE, message=FALSE}
-plot_ly(mtcars, x="wt", y="mpg", mode="markers")
+plot_ly(mtcars, x=~wt, y=~mpg, mode="markers")
 ```
+
+## Scatterplot Color
+```{r, echo = FALSE, message=FALSE}
+plot_ly(mtcars, x = ~wt, y = ~mpg, mode = "markers", color = ~cyl)
+```
+
+## Continuous Color
+
+```{r, echo = FALSE, message=FALSE}
+plot_ly(mtcars, x = ~wt, y = ~mpg, mode = "markers", color = ~disp)
+```
+
+
+## Scatterplot Sizing
+
+```{r, echo=FALSE, message=FALSE}
+plot_ly(mtcars, x = ~wt, y = ~mpg, mode = "markers", 
+        color = ~cyl, size = ~hp)
+
+```
+
+## 3D scatterplot
 

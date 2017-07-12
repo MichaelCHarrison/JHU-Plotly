@@ -1,0 +1,19 @@
+---
+title: "Plotly"
+author: "Michael Harrison"
+date: "July 11, 2017"
+output: html_document
+---
+
+Install and load plotly
+```{r}
+install.packages("plotly")
+library(plotly)
+```
+
+
+#Basic Scatterplot
+```{r, echo=FALSE, message=FALSE}
+plot_ly(mtcars, x="wt", y="mpg", mode="markers")
+```
+
